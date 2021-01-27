@@ -1,0 +1,11 @@
+server:
+  port: 8081
+dubbo:
+  application:
+    name: consumer-user
+  #配置注册中心，用来发布服务 zk
+  registry:
+    address: zookeeper://81.70.223.139:2181
+  protocol:
+    port: 12398   #20800 zk内部代理服务端口
+#只有提供服务的工程，才需要被扫描业务类
